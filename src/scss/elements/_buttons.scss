@@ -1,0 +1,116 @@
+/*--------------------------------------------------------------
+## Buttons
+--------------------------------------------------------------*/
+input[type='submit'],
+.btn {
+	display: inline-block;
+	text-align: center;
+	border-radius: 6px;
+	background-color: $dodger-blue;
+	color: $white;
+	padding: 19px 10px;
+	outline: none;
+	min-width: 220px;
+	transition: $dur $ease;
+	border: none;
+	font-size: 17px;
+
+	@include hover {
+		background-color: $sapphire;
+	}
+
+	&.btn--sm {
+		min-width: 137px;
+	}
+
+	&.btn--icon {
+		min-width: 54px;
+		padding: 15px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $watusi;
+
+		@include hover {
+			background-color: $orange;
+		}
+
+		.btn-icon {
+			height: 17px;
+		}
+	}
+}
+
+.btn--big {
+	min-width: 250px;
+	padding: 10px 20px;
+}
+
+.btn--orange {
+	background-color: $orange;
+	color: $white;
+
+	@include hover {
+		background-color: $dodger-blue;
+	}
+}
+
+.btn--border {
+	background-color: $white;
+	color: $orange;
+	border: 2px solid $orange;
+
+	@include hover {
+		border-color: $dodger-blue;
+		color: $dodger-blue;
+		background-color: $white;
+	}
+}
+
+.btn--blue {
+	background-color: $pattens-blue;
+	color: $dodger-blue;
+
+	@include hover {
+		background-color: $dodger-blue;
+		color: $white;
+	}
+}
+
+.loader {
+	position: relative;
+    width: 100px;
+	height: 25px;
+
+	.dots {
+		height: 10px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 3;
+		transform: translate(-50%, -50%);
+
+		span {
+			transition: 6000ms ease;
+			background: $dodger-blue;
+			height: 6px;
+			width: 6px;
+			margin: 0 2px 0 0;
+			display: inline-block;
+			border-radius: 50%;
+			animation: wave 2s ease  infinite;
+
+			&:nth-child(1) {
+				animation-delay: 0;
+			}
+
+			&:nth-child(2) {
+	 		 	animation-delay: 100ms;
+			}
+
+			&:nth-child(3) {
+				animation-delay: 200ms;
+		  	}
+		}
+	}
+}
